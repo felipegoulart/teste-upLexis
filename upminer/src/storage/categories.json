@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Todos",
+    "icon": "fas fa-globe"
+  },
+  {
+    "title": "Profissional",
+    "icon": "fas fa-briefcase"
+  },
+  {
+    "title": "Reguladores",
+    "icon": "fas fa-landmark"
+  },
+  {
+    "title": "Sócio Ambiental",
+    "icon": "fas fa-tree"
+  },
+  {
+    "title": "Jurídico",
+    "icon": "fas fa-gavel"
+  },
+  {
+    "title": "Listas Restritivas",
+    "icon": "fas fa-ban"
+  },
+  {
+    "title": "Mídia / Internet",
+    "icon": "fas fa-globe-americas"
+  },
+  {
+    "title": "Bens e Imóveis",
+    "icon": "fas fa-gem"
+  },
+  {
+    "title": "Cadastro",
+    "icon": "fas fa-male"
+  },
+  {
+    "title": "Financeiro",
+    "icon": "fas fa-piggy-bank"
+  }
+]
