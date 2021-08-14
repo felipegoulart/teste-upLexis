@@ -1,17 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from "@/views/Home"
+import Home from "@/layout/Home"
+import Apps from "@/views/Apps"
+import Details from "@/views/Details"
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    childrens: [
+    component: Home,
+    redirect: { name: 'Aplicativos' },
+    children: [
       {
-        path: 'app/:id',
-        name: 'app',
-        component: Home
+        path: '/',
+        name: 'Aplicativos',
+        component: Apps
+      },
+      {
+        path: 'detalhes/:id',
+        name: 'Details',
+        component: Details
       }
     ]
   },
