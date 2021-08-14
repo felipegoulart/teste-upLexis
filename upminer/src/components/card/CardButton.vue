@@ -2,7 +2,7 @@
   <footer class="card__button">
     <router-link
       class="card__link"
-      :to="{ name: 'app', params: { appId: card.id } }"
+      :to="{ name: 'Details', params: { id: card.id } }"
     />
     <price class="card__value" :price="Number(card.price)"/>
     <span class="card__learn-more">Saiba mais</span>
