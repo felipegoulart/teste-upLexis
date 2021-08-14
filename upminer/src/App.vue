@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <i v-for="category in categories" :key="category.title" :class="category.icon"><span>{{category.title}}</span></i>
-
-    <card :card="{id: 1, title: 'Teste', description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, quam.', value: '29.99'}"/>
+    <main class="app-list">
+      <card class="app-card" v-for="app in apps" :key="app.id" :card="app"/>
+    </main>
   </div>
 </template>
 
 <script>
 import categories from './storage/categories'
-import Card from '@/components/Card'
+import apps from './storage/appList'
+import Card from '@/components/card/Card'
 
 export default {
   data() {
     return { 
-      categories
+      categories,
+      apps
     }
   },
 
@@ -29,7 +31,20 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  
+  font-size: $text-size-1;
+  font-weight: 500;
   font-family: 'Roboto', sans-serif;
+}
+
+.app-list {
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  .app-card {
+    margin: 27px 12px;
+  }
 }
 </style>
