@@ -14,7 +14,7 @@
 import { mapActions, mapGetters } from 'vuex';
 import categories from "@/storage/categories";
 
-import Category from "@/components/categories/Category";
+import Category from "./Category";
 
 export default {
   name: 'categories-navbar',

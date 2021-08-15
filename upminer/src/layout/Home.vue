@@ -11,16 +11,17 @@
     >
       <img
         class="slide"
-        src="../../public/banner/header__banner-1.png"
+        src="/img/banner/header__banner-1.png"
         alt=""
       />
       <img
         class="slide"
-        src="../../public/banner/header__banner-2.png"
+        src="/img/banner/header__banner-2.png"
         alt=""
       />
     </agile>
-    <router-view />
+
+    <router-view class="view" />
   </div>
 </template>
 

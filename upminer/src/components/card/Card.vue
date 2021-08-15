@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import CardHeader from "@/components/card/CardHeader"
-import CardDescription from "@/components/card/CardDescription"
-import CardButton from "@/components/card/CardButton"
+import CardHeader from "./CardHeader"
+import CardDescription from "./CardDescription"
+import CardButton from "./CardButton"
 
 export default {
   name: "card",
