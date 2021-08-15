@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .card-description {
-  color: $color-gray-2;
+  color: $color-gray-3;
   font-size: $text-size-1;
   text-align: center;
 }
