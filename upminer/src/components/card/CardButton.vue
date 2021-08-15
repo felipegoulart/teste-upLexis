@@ -26,7 +26,7 @@ export default {
 
     goTo() {
       this.ActionSetApp(this.card)
-      this.$router.push({ name: 'Details', params: { id: this.card.id } })
+      this.$router.push({ name: 'Details', params: { id: this.card.id }})
     }
   },
 

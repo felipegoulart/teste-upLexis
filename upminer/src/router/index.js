@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import beforeEach from './beforeEach'
 
 import Home from "@/layout/Home"
 import Apps from "@/views/Apps"
@@ -15,12 +16,18 @@ const routes = [
       {
         path: '/',
         name: 'Aplicativos',
-        component: Apps
+        component: Apps,
+        meta: {
+          name: 'Aplicativos'
+        }
       },
       {
         path: 'detalhes/:id',
         name: 'Details',
-        component: Details
+        component: Details,
+        meta: {
+          name: 'Detalhes'
+        }
       }
     ]
   },
@@ -34,4 +41,5 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach(beforeEach)
 export default router

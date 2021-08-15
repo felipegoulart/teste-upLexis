@@ -36,14 +36,18 @@ export default {
 <style lang="scss" scoped>
 .carousel {
   width: 90%;
-  overflow-x: auto;
-  justify-content: space-between;
   align-items: center;
   position: relative;
 
+  @media screen and(max-width: 480px) {
+    overflow-x: auto;
+  }
+
   &__list {
     display: flex;
-    padding: 12px 8px;
+    justify-content: space-between;
+
+    padding: 12px 4px;
   }
 
   &__arrow {
