@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <header>
       <categories-navbar />
       <order class="order"/>
@@ -59,7 +59,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .order {
   margin-top: 36px;
   margin-bottom: 9px;

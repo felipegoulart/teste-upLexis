@@ -59,7 +59,10 @@ export default {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 36px 122px;
-
+  @media screen and (max-width: 480px) {
+    padding: 16px 20px;
+  
+  }
   &__carousel {
     align-self: center;
   }
@@ -68,6 +71,10 @@ export default {
     color: $color-gray-3;
     font-size: $text-size-3;
     padding: 36px 36px;
+
+    @media screen and (max-width: 480px) {
+      padding: 36px 0;
+    }
   }
 
   &__footer {
@@ -78,6 +85,12 @@ export default {
     align-items: center;
     padding: 0 36px;
 
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 0 18px;
+
+    }
 
     .price {
       color: $color-black;

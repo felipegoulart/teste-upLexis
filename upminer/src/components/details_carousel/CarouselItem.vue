@@ -36,7 +36,18 @@ export default {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 18px rgba($color-black, 0.1);
+  
+    @media screen and(max-width: 480px) {
+      min-width: 95%;
+      height: 95%;
+      margin: 0 4px;
+    }
   }
+
+  &__image{
+    width: 100%;
+  }
+
 
   &__description{
     color: $color-orange-1;

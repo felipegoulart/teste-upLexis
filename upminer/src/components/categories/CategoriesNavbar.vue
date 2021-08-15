@@ -43,9 +43,15 @@ export default {
   max-width: 100vw;
   display: flex;
   justify-content: center;
+
   .categories__list {
     display: flex;
     flex-wrap: wrap;
+
+      @media screen and (max-width: 480px) {
+        justify-content: center;
+        margin: 0 auto;
+      }
 
     & > :nth-child(1) {
       border-top-left-radius: 5px;
