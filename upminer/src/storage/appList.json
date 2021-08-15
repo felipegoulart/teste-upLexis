@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Profissional",
     "description": "",
-    "price": "29.99"
+    "price": "39.99"
   },
   {
     "id": 2,
@@ -39,7 +39,7 @@
     "id": 7,
     "title": "Bens e Imóveis",
     "description": "O aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de empresas S.A., de capital aberto e limitadas (LTDA) de grande porte.",
-    "price": "29.99"
+    "price": "49.99"
   },
   {
     "id": 8,
