@@ -25,11 +25,14 @@
 </template>
 
 <script>
-export default {
 
-}
+export default {
+  name: "home-layout",
+};
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.carousel {
+  margin-bottom: 36px;
+}
 </style>
