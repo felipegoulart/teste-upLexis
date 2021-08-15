@@ -1,8 +1,8 @@
 <template>
   <footer class="card__button">
-    <router-link
+    <span
       class="card__link"
-      :to="{ name: 'Details', params: { id: card.id } }"
+      @click="goTo"
     />
     <price class="card__value" :price="Number(card.price)"/>
     <span class="card__learn-more">Saiba mais</span>
@@ -11,6 +11,7 @@
 
 <script>
 import Price from "@/components/Price"
+import { mapActions } from 'vuex';
 
 export default {
   props: {
@@ -18,6 +19,15 @@ export default {
       type: Object,
       default: () => ({})
     },
+  },
+
+  methods: {
+    ...mapActions(['ActionSetApp']),
+
+    goTo() {
+      this.ActionSetApp(this.card)
+      this.$router.push({ name: 'Details', params: { id: this.card.id } })
+    }
   },
 
   components: {
@@ -53,6 +63,7 @@ export default {
     height: 100%;
     top: 0;
     left: 0;
+    cursor: pointer;
 
     &:hover {
       background: rgba($color-white, 0.1);

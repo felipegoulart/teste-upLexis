@@ -22,6 +22,10 @@ export default new Vuex.Store({
       return state.apps
     },
 
+    myApp: state => {
+      return state.app
+    },
+
     selectedCategory: state => {
       return state.category
     },
@@ -60,6 +64,7 @@ export default new Vuex.Store({
       state.order = payload
     },
   },
+  
   actions: {
     ActionSetCategories({ commit }, payload) {
       commit('categories', payload)
@@ -74,6 +79,10 @@ export default new Vuex.Store({
 
     ActionSetApps({ commit }, payload) {
       commit('apps', payload)
+    },
+
+    ActionSetApp({ commit }, payload) {
+      commit('app', payload)
     },
   },
 })
