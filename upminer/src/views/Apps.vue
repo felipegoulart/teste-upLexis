@@ -59,15 +59,6 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  font-size: $text-size-1;
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
-}
 
 .order {
   margin-top: 36px;
