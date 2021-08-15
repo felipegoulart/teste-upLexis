@@ -5,8 +5,6 @@
         v-for="category in myCategories"
         :key="category.title"
         :title="category.title"
-        :active="category.title === selectedFilter"
-        @selected="selectCategory"
       />
     </ul>
   </nav>
@@ -30,7 +28,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['ActionSetCategories'])
+    ...mapActions(['ActionSetCategories']),
   },
 
   components: {

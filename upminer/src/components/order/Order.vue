@@ -9,12 +9,20 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'order',
 
-  data() {
-    return {
-      order: 'Lançamento'
+  computed: {
+    ...mapGetters(['myOrder']),
+
+    order: {
+      get() {
+        return this.myOrder
+      },
+      set(value) {
+        this.$store.commit('order', value)
+      }
     }
   },
 }
@@ -22,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .order__label {
+  font-size: $text-size-2;
   font-weight: bold;
   text-transform: uppercase;
   margin: 20px;

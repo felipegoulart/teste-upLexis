@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import categories from '@/storage/categories'
+import { mapGetters, mapActions } from 'vuex'
 import apps from '@/storage/appList'
 
 import CategoriesNavbar from "@/components/categories/CategoriesNavbar";
@@ -19,19 +19,43 @@ import Order from "@/components/order/Order";
 import Card from "@/components/card/Card";
 
 export default {
-  name: 'Home',
+  name: "Apps",
   data() {
-    return { 
-      categories,
-      apps
-    }
+    return {
+      filter: false,
+      order: "Lançamento",
+    };
+  },
+
+  mounted () {
+    this.ActionSetApps(apps);
+  },
+
+  computed: {
+    ...mapGetters(['myApps', 'selectedCategory', 'myFilter', 'myOrder']),
+
+    appList() {
+      const appList = this.myFilter
+        ? this.myApps.filter((app) => app.title === this.selectedCategory)
+        : this.myApps;
+
+
+      return this.myOrder === "Lançamento"
+        ? appList.sort((a, b) => a.id - b.id)
+        : appList.sort((a, b) => a.price - b.price)
+    },
+  },
+
+  methods: {
+    ...mapActions(['ActionSetApps']),
   },
 
   components: {
-    Card,
+    CategoriesNavbar,
+    Order,
+    Card
   },
-
-}
+};
 </script>
 
 <style lang="scss">
@@ -49,7 +73,7 @@ export default {
   margin-top: 36px;
   margin-bottom: 9px;
 }
-
+  
 .app-list {
   padding: 0 16px;
   display: flex;

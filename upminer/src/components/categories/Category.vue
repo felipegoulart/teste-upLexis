@@ -15,6 +15,7 @@
 
 <script>
 import Icon from "@/components/Icon";
+import { mapGetters, mapActions } from 'vuex';
 export default {
   name: "category",
 
@@ -23,16 +24,20 @@ export default {
       type: String,
       default: "Todos",
     },
+  },
 
-    active: {
-      type: Boolean,
-      default: false,
-    },
+  computed: {
+    ...mapGetters(['selectedCategory']),
+
+    active() {
+      return this.selectedCategory === this.title
+    }
   },
 
   methods: {
+    ...mapActions(['ActionSetCategory']),
     select() {
-      this.$emit("selected", this.title);
+      this.ActionSetCategory(this.title)
     },
   },
 
